@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login & Cadastro — COLECTION</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">COLECTION</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Início</a>
+      <a href="vip.html">VIP</a>
+      <a href="community.html">Comunidade</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Login & Cadastro</h1>
+      <p>Entre na sua conta ou crie uma nova para explorar o mundo dos colecionáveis.</p>
+    </section>
+
+    <section class="vip-grid">
+      <!-- Login -->
+      <div class="panel">
+        <h2>Login</h2>
+        <form class="form" id="loginForm">
+          <div class="form-row">
+            <label for="loginUser">Usuário</label>
+            <input type="text" id="loginUser" required />
+          </div>
+          <div class="form-row">
+            <label for="loginPass">Senha</label>
+            <input type="password" id="loginPass" required />
+          </div>
+          <button type="submit" class="btn btn-gold">Entrar</button>
+        </form>
+      </div>
+
+      <!-- Cadastro -->
+      <div class="panel">
+        <h2>Cadastro</h2>
+        <form class="form" id="registerForm">
+          <div class="form-row">
+            <label for="regUser">Usuário</label>
+            <input type="text" id="regUser" required />
+          </div>
+          <div class="form-row">
+            <label for="regEmail">Email</label>
+            <input type="email" id="regEmail" required />
+          </div>
+          <div class="form-row">
+            <label for="regPass">Senha</label>
+            <input type="password" id="regPass" required />
+          </div>
+          <button type="submit" class="btn btn-outline">Criar conta</button>
+        </form>
+      </div>
+
+      <!-- Mensagem -->
+      <div class="panel">
+        <h2>Bem-vindo(a)!</h2>
+        <p>Ao se cadastrar, você poderá salvar favoritos, publicar anúncios e assinar o plano VIP.</p>
+        <p class="form-tip">Esta é uma simulação local. Em produção, conecte com seu backend e banco de dados.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="brand-inline">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">COLECTION</span>
+    </div>
+    <p class="footer-copy">© 2025 COLECTION.</p>
+  </footer>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const user = document.getElementById('loginUser').value.trim();
+      const pass = document.getElementById('loginPass').value.trim();
+      if (user && pass) {
+        alert(`Bem-vindo(a), ${user}!`);
+        window.location.href = 'vip.html';
+      }
+    });
+
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const user = document.getElementById('regUser').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const pass = document.getElementById('regPass').value.trim();
+      if (user && email && pass) {
+        alert(`Conta criada para ${user}! Faça login para continuar.`);
+        document.getElementById('registerForm').reset();
+      }
+    });
+  </script>
+</body>
+</html>

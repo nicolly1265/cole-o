@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COLECTION — Comunidade</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Comunidade COLECTION — trocas e vendas de objetos colecionáveis." />
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">COLECTION</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Início</a>
+      <a href="vip.html">VIP</a>
+      <a href="community.html" class="active">Comunidade</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Comunidade</h1>
+      <p>Troque, venda e descubra novas peças com colecionadores.</p>
+    </section>
+
+    <section class="market">
+      <div class="panel">
+        <h2>Publicar anúncio</h2>
+        <form class="form" id="postForm">
+          <div class="form-row">
+            <label for="postTitle">Título</label>
+            <input type="text" id="postTitle" placeholder="Ex.: Álbum Copa 2006 completo" required />
+          </div>
+          <div class="form-row">
+            <label for="postType">Tipo</label>
+            <select id="postType" required>
+              <option value="troca">Troca</option>
+              <option value="venda">Venda</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="postPrice">Preço (se venda)</label>
+            <input type="number" id="postPrice" placeholder="R$" step="0.01" />
+          </div>
+          <div class="form-row">
+            <label for="postDesc">Descrição</label>
+            <textarea id="postDesc" rows="3" placeholder="Detalhes, estado, raridade..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline">Publicar</button>
+          <p class="form-tip">Simulação local. Em produção, salve no banco de dados e modere conteúdos.</p>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2>Anúncios recentes</h2>
+        <ul class="post-list" id="postList">
+          <!-- gerado via script.js -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="brand-inline">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">COLECTION</span>
+    </div>
+    <p class="footer-copy">© 2025 COLECTION.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

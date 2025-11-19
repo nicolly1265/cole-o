@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COLECTION — VIP</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Área VIP COLECTION — usuário, favoritos e assinatura premium." />
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">COLECTION</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Início</a>
+      <a href="vip.html" class="vip-link active">VIP</a>
+      <a href="community.html">Comunidade</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Área VIP</h1>
+      <p>Benefícios dourados: destaque, favoritos ilimitados e vitrine premium.</p>
+    </section>
+
+    <section class="vip-grid">
+      <div class="panel">
+        <h2>Entrar</h2>
+        <form class="form" id="loginForm">
+          <div class="form-row">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" name="username" placeholder="Seu usuário" required />
+          </div>
+          <div class="form-row">
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Sua senha" required />
+          </div>
+          <button type="submit" class="btn btn-gold">Entrar</button>
+          <p class="form-tip">Dica: esta é uma simulação local. Em produção, conecte com seu backend e autenticação segura.</p>
+        </form>
+
+        <div class="user-card" id="userCard" hidden>
+          <div class="user-avatar">👤</div>
+          <div>
+            <p class="user-name" id="userName">Usuário</p>
+            <p class="user-status"><span class="badge badge-gold">VIP</span> Assinatura ativa</p>
+          </div>
+          <button class="btn btn-outline" id="logoutBtn">Sair</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Favoritos</h2>
+        <p>Salve seus itens favoritos e mantenha-os à mão.</p>
+        <form class="form" id="favForm">
+          <div class="form-row">
+            <label for="favName">Item</label>
+            <input type="text" id="favName" placeholder="Ex.: Figurinha Rara 1998" />
+          </div>
+          <div class="form-row">
+            <label for="favCategory">Categoria</label>
+            <select id="favCategory">
+              <option>Figurinhas</option>
+              <option>Carrinhos</option>
+              <option>Moedas</option>
+              <option>Selos</option>
+              <option>Outros</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-outline">Adicionar favorito</button>
+        </form>
+
+        <ul class="fav-list" id="favList"></ul>
+      </div>
+
+      <div class="panel">
+        <h2>Assinatura VIP</h2>
+        <p>Assine para desbloquear recursos exclusivos e vitrine premium.</p>
+        <div class="price-row">
+          <div class="price-tag">
+            <span class="price-amount">R$ 19,90</span>
+            <span class="price-period">/mês</span>
+          </div>
+          <button class="btn btn-gold" id="subscribeBtn">Assinar</button>
+        </div>
+        <ul class="benefits">
+          <li><strong>Favoritos ilimitados:</strong> Salve quantos itens quiser.</li>
+          <li><strong>Destaque na comunidade:</strong> Vitrine premium nos resultados.</li>
+          <li><strong>Suporte prioritário:</strong> Atendimento mais rápido.</li>
+        </ul>
+        <p class="form-tip">Simulação de pagamento local. Em produção, integre com seu provedor de pagamento.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="brand-inline">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">COLECTION</span>
+    </div>
+    <p class="footer-copy">© 2025 COLECTION.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
